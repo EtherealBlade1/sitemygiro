@@ -1,0 +1,762 @@
+body {
+	margin: 0;
+	font-family: 'Spectral', serif;;
+	font size: 25px 
+	color #333;
+	line-height: 1.4;
+}
+
+*,
+*:before,
+*:after{
+	-webkit -box-sizing: border-box;
+}
+
+h1,{
+	margin: 10px;
+
+}
+h2,h3,h3,h4,h5,h6 {
+	margin: 0;
+}
+
+p {
+	marrgin: 0 0 10px;
+}
+
+/*container*/
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+
+/*intro*/
+.intro{
+
+	margin:0px  0px;
+ 	height: 700px;
+ 	background: #333;
+ 	background:url('images/intro.png') 100% no-repeat;
+
+
+}
+.intro_title {
+	font-family: 'Spectral', sans-serif;
+	font-size: 45px;
+	color: #333;
+	font-weight: 700;
+	text-align: left;
+	line-height: 0.6
+}
+
+.intro_sub{
+font-size: 25px;
+color: #333;
+font-weight: 400;
+line-height: 1.2;
+
+}
+.intro_subf{
+	margin-bottom: 30px;
+}
+}
+
+/*HEADER*/
+.header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	
+
+
+}
+
+
+.header_inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header_logo {
+
+
+}
+
+/*nav*/
+.nav{
+	font-size: 25px;
+	text-transform: uppercase;
+
+}
+
+/*nav_link*/
+.nav_link {
+display: inline-block;
+vertical-align: top;
+margin: 10px;
+	color: #333;
+	text-decoration: none;
+	
+    
+    transition: color .2 linear;
+
+}
+.nav_link:hover {
+	color: gray;
+}
+
+/*nav_link_butt*/
+.nav_link_butt {
+display: inline-block;
+vertical-align: top;
+margin: 10px;
+	color: #333;
+	text-decoration: none;
+	
+    
+    transition: color .2 linear;
+
+     overflow: hidden
+
+}
+
+
+.nav_link_butt img{
+
+transition: 1s;
+display: block;
+}
+.nav_link_butt:hover{
+transform: scale(1.2);
+
+
+
+}
+
+/*button Перейти интро*/
+ .btn {
+ 	display: inline-block;
+ 	vertical-align: top;
+ 	padding: 14px 40px;
+
+ 	border-radius: 15px;
+
+
+
+ 	font-size: 13px;
+ 	color: #fff;
+ 	font-weight: 600;
+ 	text-transform: uppercase;
+ 	text-decoration: none;
+ 	transition: transform .2s;
+
+
+
+
+ }
+
+ .btn--red {
+ 	background-color:#6b0409;
+
+ }
+
+.btn--red:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+ 
+
+ /* ОПИСАНИЕ ЭЛЕКТРОТРАНСПОРТА */
+
+.electro{
+		width: 100%;
+	max-width: 1800px;
+	margin: 0 auto;
+}
+
+
+
+/*слайдер*/
+
+
+
+
+#slider { /*положение слайдера*/
+    position: relative;
+	text-align: center;
+    top: -100px;
+}
+
+#slider{ /*центровка слайдера*/
+	margin: 0 auto;
+}
+
+#slides article{ /*все изображения справа друг от доруга*/
+	width: 20%;
+	float: left;
+}
+
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 30%;
+}
+
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+	max-width: 450px; /*максимальнная длинна*/
+}
+
+/*настройка переключения и положения для левой стрелки*/
+/*если свич1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+#switch1:checked ~ #controls label:nth-child(5), 
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3),
+#switch5:checked ~ #controls label:nth-child(4){
+	background: url('prev.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: left;
+	margin: 0 0 0 -84px; /*сдвиг влево*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+/*настройка переключения и положения для правой стрелки*/
+#switch1:checked ~ #controls label:nth-child(2), 
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(5),
+#switch5:checked ~ #controls label:nth-child(1){
+	background: url('next.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: right;
+	margin: 0 -84px 0 0; /*сдвиг вправо*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
+	cursor: pointer;
+}
+
+.all input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
+#controls{ /*положение блока всех управляющих элементов*/
+	margin: -25% 0 0 0;
+	width: 100%;
+	height: 70px;
+}
+
+#active label{ /*стиль отдельного переключателя*/
+	border-radius: 10px; /*скругление углов*/
+	display: inline-block; /*расположение в строку*/
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+}
+
+#active{ /*расположение блока с переключателями*/
+	margin: 23% 0 0;
+	text-align: center;
+}
+
+#active label:hover{ /*поведение чекбокса при наведении*/
+	background: #bd4348;
+	border-color: #777 !important; /*выполнение в любом случае*/
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5){
+	background: #6b0409;
+	border-color: #6b0409 !important;
+}
+
+#slides .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover{ /*прозрачность стрелок при наведении*/
+	opacity: 0.6;
+}
+
+#controls label{ /*прозрачность стрелок при отводе курсора*/
+	transition: opacity 0.2s ease-out;
+}
+
+
+ 
+	
+/*Категории*/
+.CATEGORYNAME{
+
+	text-align: center;
+
+
+}
+
+.list-group{
+    align-items: center;
+    display: flex;
+}
+
+.list-group-item {
+    justify-content: center;
+	text-align: center;
+ 	display: inline-block;
+ 	vertical-align: top;
+ 	padding: 15px 40px;
+
+ 	border-radius: 15px;
+ 	background-color:#6b0409;
+
+ 	font-size: 13px;
+ 	color: #fff;
+ 	font-weight: 600;
+ 	text-transform: uppercase;
+ 	text-decoration: none;
+ 	transition: transform .2s;
+
+ 	width: 150px;
+    height: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/*ховер)*/
+.list-group-item:hover{
+
+-ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+
+}
+
+/*Категории*/
+.productsblock2 {
+    display: flex;
+    flex-direction: column;
+    background: url("images/fonca.png") no-repeat;
+    background-position: center;
+
+
+
+}
+
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+[value="All"]:checked ~ .posts [data-category] {
+    display: flex;
+}
+
+[value="giro"]:checked ~ .posts .post:not([data-category~="giro"]),
+[value="sigv"]:checked ~ .posts .post:not([data-category~="sigv"]),
+[value="samo"]:checked ~ .posts .post:not([data-category~="samo"]) {
+    display: none;
+}
+
+.filters {
+    display: flex;
+}
+
+.card1, .card2, .card3, {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.post {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+     margin-top: 50px;
+
+}
+.post2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+     margin-top: 50px;
+
+ }
+
+.posts {
+    padding-top: 50px;
+    margin: auto;
+}
+
+.list-group-itemf {
+
+	justify-content: center;
+	text-align: center;
+ 	display: inline-block;
+ 	vertical-align: top;
+ 	padding: 15px 20px;
+
+ 	border-radius: 20px;
+ 	background-color:#9f020d;
+
+ 	font-size: 13px;
+ 	color: #fff;
+ 	font-weight: 600;
+ 	text-transform: uppercase;
+ 	text-decoration: none;
+ 	transition: transform .2s;
+
+ 	width: 140px;
+    height: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+   
+
+
+}
+
+
+/*емайл рассылки*/
+.emailspam{
+	
+	margin: 0 auto;
+	padding-top: 150px;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	
+}
+
+.emailtext{
+	color: #333;
+	font-size: 25px;
+	font-weight: 700;
+	padding-right: 50px;
+
+}
+.vvod{
+
+	background-color: #fadbdb;
+	outline: none;
+	border-radius: 20px;
+	border: none;
+	width: 260px;
+	height: 40px;
+	padding-left: 20px;
+}
+
+.list-group-itemf:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+/*Отзывы*/
+
+.OTZUV{
+  background: url("images/otzivfon.png") no-repeat;
+  background-position: center;
+}
+
+
+
+
+.OTZIVTEXT {
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+.Otzivi{
+
+	
+    background-position:center;
+	
+}
+
+.otziviGL{
+	display: flex;
+  flex-direction: column;
+
+}
+
+
+.OtzivR{
+	display: flex;
+    justify-content: center;
+    padding: 30px;
+
+}
+
+.OtzivR1, .OtzivR2, .OtzivR3{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 80px;
+    background-color: #fadbdb;
+    pa
+
+}
+
+.NAMETEXT {
+    
+
+    font-size: 20px;
+
+}
+.SUBtext {
+	padding-top: 10px;
+	font-size: 20px;
+}
+/* ПРОСТО НЕВИДИМЫЙ СИМВОЛ ДЛЯ КРАСОТЫ */
+.nevidimyu
+{
+	left: -9999px;
+}
+
+
+/*бренды*/
+
+.brend_text {
+    padding: 30px;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+.brendslogo{
+    width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	flex-direction: row;
+	padding: 20px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.brendslog{
+	flex-direction: row;
+}
+
+/* Консультация*/
+
+.constext{
+	 padding: 40px;
+    text-align: center;
+    font-size: 40px;
+
+
+}
+
+
+
+.consult {
+
+    
+   
+    
+    
+}
+
+.consults {
+    text-align: center;
+    padding: 50px;
+
+
+
+}
+
+.conntactvvod{
+
+	background-color: #fadbdb;
+	outline: none;
+	border-radius: 20px;
+	border: none;
+	width: 260px;
+	height: 40px;
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+
+.constextbut{
+
+
+}
+
+.constextbutt {
+
+	justify-content: center;
+	text-align: center;
+ 	display: inline-block;
+ 	vertical-align: top;
+ 	padding: 15px 20px;
+
+ 	border-radius: 20px;
+ 	background-color:#9f020d;
+
+ 	font-size: 13px;
+ 	color: #fff;
+ 	font-weight: 600;
+ 	text-transform: uppercase;
+ 	text-decoration: none;
+ 	transition: transform .2s;
+
+ 	width: 140px;
+    height: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.constextbutt:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+
+/* СТРЕЛКА НАВЕРХ */
+
+
+.topbutton {
+width:50px;
+border:5px solid #6a1d22;
+background:#darkred;
+text-align:center;
+padding:10px;
+position:fixed;
+bottom:20px;
+right:30px;
+cursor:pointer;
+color:#333;
+font-family:Spectral;
+font-size:12px;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+}
+
+
+
+
+
+/* ФУТЕР */
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 0;
+  margin-top: 500px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  background-color: #111;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-bottom a:hover {
+  color: #007bff;
+}
+
+.social-icons img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: border 0.2s ease-in-out;
+}
+
+.social-icons img:hover {
+  border: 2px solid #
